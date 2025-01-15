@@ -4,14 +4,27 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
-    {
-        "type": "firefox",
-        "request": "launch",
-        "reAttach": true,
-        "name": "Launch add-on",
-        "addonPath": "${workspaceFolder}"
-    },
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "firefox",
+            "request": "launch",
+            "reAttach": true,
+            "name": "Launch index.html",
+            "file": "${workspaceFolder}/index.html"
+        },
+        {
+            "type": "firefox",
+            "request": "launch",
+            "reAttach": true,
+            "name": "Launch add-on",
+            "addonPath": "${workspaceFolder}"
+        },
         {
             "name": "Launch index.html",
             "type": "firefox",
